@@ -44,3 +44,17 @@ module.exports = {
     'config': path.resolve('config', 'database.js')
 }
 ```
+# Usando Raw Queryes
+
+## importar o sequelize e config
+## instanciar um objeto através do sequelize passando a config e nomeando de db
+
+# Objeto DB métodos
+
+## query
+    ```
+    result = await db.query("QUERY SQL", {
+        type:Sequelize.QueryTypes.SELECT
+        replacements: {}
+    })
+    ```
