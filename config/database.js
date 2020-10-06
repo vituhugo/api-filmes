@@ -1,7 +1,9 @@
 const config = {
-    username: 'root',
-    password: '',
-    database: 'movies',
+    username: 'movies',
+    password: 'secret',
+    database: 'filmes',
     host: 'localhost',
     dialect: 'mysql'
 }
+
+module.exports = config;
