@@ -1,8 +1,7 @@
-const Sequelize = require('sequelize');
 // const config = require('./../config/database');
 const { Filme } = require('../models')
 var FilmeController = {
-    index: async (req, res) => {
+    exemplo: async (req, res) => {
         // const db = new Sequelize(config);
 
         // const result = await db.query("SELECT * FROM filmes", {type: Sequelize.QueryTypes.SELECT})
@@ -32,9 +31,18 @@ var FilmeController = {
         // avg Filme.avg -> retorna a media do campo
         // max retorna o maior valor
         // min retorna o menor valor
-        
+
         console.log(result);
         res.send('Olá');
+    },
+
+    home: async (req, res) => {
+        // Listar os produtos
+        // Receber os dados do banco
+        // Chamar a view e passar os dados que vieram do banco
+        const result = await Filme.findAll();
+        console.log(result);
+        return res.render('filme/home', {result})
     }
 }
 
