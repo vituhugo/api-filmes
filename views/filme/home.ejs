@@ -20,7 +20,10 @@
                 <td><%= item.titulo %></td>
                 <td><%= item.avaliacao %></td>
                 <td><%= item.genero_id %></td>
-                <td><button>DELETAR</button></td>
+                <td>
+                    <a href="/filmes/<%= item.id %>">Editar</button>
+                    <button>DELETAR</button>
+                </td>
             </tr>            
         <% }) %>
 
